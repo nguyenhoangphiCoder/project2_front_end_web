@@ -54,7 +54,7 @@ export const columns: ColumnDef<Orders>[] = [
     accessorKey: "",
     header: "Total",
     cell: ({ row }) => {
-      const total = row.getValue("order_items") as unknown as OrderItems[];
+      const total = row.getValue("orderItems") as unknown as OrderItems[];
       return total.reduce((acc, item) => {
         return acc + item.price * item.quantity;
       }, 0);

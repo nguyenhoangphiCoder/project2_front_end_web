@@ -15,5 +15,5 @@ export type Orders = {
   created_at: Date;
   updated_at: Date;
   status: string;
-  order_items: OrderItems[];
+  orderItems: OrderItems[];
 };

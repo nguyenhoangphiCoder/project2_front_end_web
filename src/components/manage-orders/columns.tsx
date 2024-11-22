@@ -19,7 +19,7 @@ export const columns: ColumnDef<Orders>[] = [
     },
   },
   {
-    accessorKey: "",
+    accessorKey: "user",
     header: "Name",
     cell: ({ row }) => {
       const managed = row.getValue("user");
@@ -27,7 +27,7 @@ export const columns: ColumnDef<Orders>[] = [
     },
   },
   {
-    accessorKey: "",
+    accessorKey: "user",
     header: "Phone",
     cell: ({ row }) => {
       const managed = row.getValue("user");
@@ -35,7 +35,7 @@ export const columns: ColumnDef<Orders>[] = [
     },
   },
   {
-    accessorKey: "",
+    accessorKey: "user",
     header: "Address",
     cell: ({ row }) => {
       const managed = row.getValue("franchise");
@@ -51,7 +51,7 @@ export const columns: ColumnDef<Orders>[] = [
     },
   },
   {
-    accessorKey: "",
+    accessorKey: "orderItems",
     header: "Total",
     cell: ({ row }) => {
       const total = row.getValue("orderItems") as unknown as OrderItems[];

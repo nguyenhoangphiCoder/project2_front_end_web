@@ -10,24 +10,27 @@ export const columns: ColumnDef<Orders>[] = [
     },
   },
   {
-    accessorKey: "buyer_email",
-    header: "Buyer Email",
+    accessorKey: "managed_by",
+    header: "Email",
     cell: ({ row }) => {
-      return row.getValue("buyer_email");
+      const managed = row.getValue("managed_by");
+      return <h1>{managed?.email ?? "unknown"}</h1>;
     },
   },
   {
     accessorKey: "buyer_name",
-    header: "Buyer Name",
+    header: "Name",
     cell: ({ row }) => {
-      return row.getValue("buyer_name");
+      const managed = row.getValue("managed_by");
+      return <h1>{managed?.name ?? "unknown"}</h1>;
     },
   },
   {
     accessorKey: "buyer_phone",
-    header: "Buyer Phone",
+    header: "Phone",
     cell: ({ row }) => {
-      return row.getValue("buyer_phone");
+      const managed = row.getValue("managed_by");
+      return <h1>{managed?.phone_number ?? "unknown"}</h1>;
     },
   },
   {

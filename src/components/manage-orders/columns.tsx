@@ -1,3 +1,5 @@
+import { useGetOrder } from "@/hooks/query-orders/useGetOrder";
+import { useOrderStore } from "@/store/useOrderStore";
 import { OrderItems } from "@/types/order-item.type";
 import { Orders } from "@/types/order.type";
 import { ColumnDef } from "@tanstack/react-table";
@@ -7,7 +9,16 @@ export const columns: ColumnDef<Orders>[] = [
     accessorKey: "id",
     header: "ID",
     cell: ({ row }) => {
-      return row.getValue("id");
+      const { setModal } = useOrderStore();
+      return (
+        <button
+          onClick={() => {
+            setModal(true, row.getValue("id"));
+          }}
+        >
+          {row.getValue("id")}
+        </button>
+      );
     },
   },
   {

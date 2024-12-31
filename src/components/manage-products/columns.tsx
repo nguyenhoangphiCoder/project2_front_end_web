@@ -1,6 +1,6 @@
 import Actions from "@/components/actions";
 import { useProductStore } from "@/store/useProductStore";
-import { useUserStore } from "@/store/useUserStore";
+
 import { Product } from "@/types/product.type";
 import { ColumnDef } from "@tanstack/react-table";
 

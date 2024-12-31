@@ -2,6 +2,7 @@ import DataTable from "@/components/data-table";
 import { Heading } from "@/components/heading";
 import PageContainer from "@/components/layout/page-container";
 import { columns } from "@/components/manage-orders/columns";
+import DialogDetails from "@/components/manage-orders/dialog-detail";
 import { useGetAllOrders } from "@/hooks/query-orders/useGetAllOrders";
 import React from "react";
 
@@ -22,6 +23,7 @@ function OrdersPage() {
           <DataTable columns={columns} data={orders ?? []} />
         </div>
       </PageContainer>
+      <DialogDetails />
     </>
   );
 }

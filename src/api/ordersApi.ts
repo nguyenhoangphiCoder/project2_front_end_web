@@ -5,4 +5,8 @@ export const ordersApi = {
     const url = "orders/";
     return axiosClient().get(url);
   },
+  getByUser: (id: string) => {
+    const url = `order_items/order/${id}`;
+    return axiosClient().get(url);
+  },
 };
